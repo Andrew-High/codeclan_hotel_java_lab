@@ -10,21 +10,25 @@ public abstract class Room {
         this.guests = new ArrayList<Guest>();
     }
 
-//
-//    public int getCapacity() {
-//        return this.getCapacity();
-//    }
-//
-//    public void setCapacity(int capacity) {
-//        this.capacity = capacity;
-//    }
-//
-//    public ArrayList<Guest> getGuests() {
-//        return this.getGuests();
-//    }
-//
-//    public void setGuests(ArrayList<Guest> guests) {
-//        this.setGuests(guests);
-//    }
+
+    public int getCapacity() {
+        return this.capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public ArrayList<Guest> getGuests() {
+        return this.guests;
+    }
+
+    public void setGuests(ArrayList<Guest> guests) {
+        this.guests = guests;
+    }
+
+    public void addGuest(Guest guest) {
+        this.guests.add(guest);
+    }
 
 }

@@ -17,4 +17,21 @@ public class BedroomTest {
     public void hasRoomNumber(){
         assertEquals(4, bedroom.getRoomNumber());
     }
+
+    @Test
+    public void hasCapacity(){
+        assertEquals(2, bedroom.getCapacity());
+    }
+
+    @Test
+    public void hasGuests(){
+        assertEquals(0, bedroom.getGuests().size());
+    }
+
+
+    @Test
+    public void canAddGuests(){
+        bedroom.addGuest(guest);
+        assertEquals(1, bedroom.getGuests().size());
+    }
 }
