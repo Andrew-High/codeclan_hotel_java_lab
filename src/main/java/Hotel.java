@@ -38,4 +38,24 @@ public class Hotel {
     public void addBedroom(Bedroom bedroom) {
         this.bedrooms.add(bedroom);
     }
+
+    public void addConferenceRoom(ConferenceRoom conferenceRoom) {
+        this.conferenceRooms.add(conferenceRoom);
+    }
+
+    public void addGuestToBedroom(Guest guest, int roomNumber) {
+        for (Bedroom room : this.bedrooms) {
+            if (room.getRoomNumber() == roomNumber) {
+                room.addGuest(guest);
+            }
+        }
+    }
+
+    public void removeGuestFromBedroom(int roomNumber, Guest guest) {
+        for (Bedroom room : this.bedrooms) {
+            if (room.getRoomNumber() == roomNumber) {
+                room.removeGuest(guest);
+            }
+        }
+    }
 }
