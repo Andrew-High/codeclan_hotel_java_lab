@@ -1,10 +1,17 @@
-public class ConferenceRoom {
+public class ConferenceRoom extends Room {
 
-    private int capacity;
     private String name;
 
-    public ConferenceRoom(){
-        this.capacity = 100;
+    public ConferenceRoom(String name){
+        super(100);
+        this.name = name;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(String name){
         this.name = name;
     }
 }
