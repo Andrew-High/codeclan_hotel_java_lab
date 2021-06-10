@@ -4,18 +4,16 @@ public class Bedroom extends Room{
 
     private int roomNumber;
     private RoomType roomType;
-    private int capacity = roomType.getCapacity();
-    private ArrayList<Guest> guests;
 
 
-    public Bedroom(ArrayList guests, int roomNumber, RoomType roomType){
-        super(guests);
+    public Bedroom(int roomNumber, RoomType roomType){
+        super(roomType.getCapacity());
         this.roomNumber = roomNumber;
         this.roomType = roomType;
     }
 
     public int getRoomNumber() {
-        return roomNumber;
+        return this.roomNumber;
     }
 
     public void setRoomNumber(int roomNumber) {
@@ -28,21 +26,5 @@ public class Bedroom extends Room{
 
     public void setRoomType(RoomType roomType) {
         this.roomType = roomType;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public ArrayList<Guest> getNumberOfGuests() {
-        return numberOfGuests;
-    }
-
-    public void setNumberOfGuests(ArrayList<Guest> numberOfGuests) {
-        this.numberOfGuests = numberOfGuests;
     }
 }

@@ -5,10 +5,12 @@ import static org.junit.Assert.assertEquals;
 
 public class BedroomTest {
     Bedroom bedroom;
+    Guest guest;
 
     @Before
     public void before(){
-        bedroom = new Bedroom(2, 2, 4, RoomType.DOUBLE);
+        guest = new Guest("Joe");
+        bedroom = new Bedroom(4, RoomType.DOUBLE);
     }
 
     @Test
